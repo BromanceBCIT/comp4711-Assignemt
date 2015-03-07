@@ -1,5 +1,5 @@
 <div id="form">
-    <form action="/admin/confirmPost" method="post">
+    <form action="/ContactUs/confirmMessage" method="post">
         {fName}
         {fEmail}
         {fSubject}
