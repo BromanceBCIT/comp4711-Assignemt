@@ -20,11 +20,23 @@ header {
     z-index: 10;
     position: fixed;
 }
-h1 {height: 1px;}
+h1 {height: 15px;}
 mynav {float: right; }
 .mynav ul {list-style-type:none; padding-right: 20px; font-size: 160%; margin-top:1px;}
 .mynav ul li {float:right; margin-right:15px; color:white;list-style-type:none;}
 .mynav a {text-decoration:none;color:black; font-weight:bold;}
+
+#contents {
+	margin: 0px 0px;
+	padding: 20px 0px;
+}
+
+#form {
+
+	margin: 0px 30px;
+	padding: 150px 40px;
+        
+}
 
 .homeBtn {
     display: block;
@@ -113,7 +125,7 @@ textarea {
 body, html {
     height: 100%;
     min-height: 100%;
-    background-color: #000000;
+    background-color: #FFFFFF;
 }
 body {
 

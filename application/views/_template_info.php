@@ -24,10 +24,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <h1>{pageTitle}</h1>
             <span class="mynav">
                 <ul>
+                    <li><a href="/admin">Admin</a></li>
                     <li><a href="/about">About</a></li>
-                    <li><a href="/stay">Stay</a></li>
-                    <li><a href="/go">Go</a></li>
-                    <li><a href="/dine">Dine</a></li>                    
+                    <li><a href="/ContactUs">Contact Us</a></li>
+                    <li><a href="/go">Photo</a></li>
+                    <li><a href="/dine">Stay</a></li>                    
                     <li><a href="/">Home</a></li>
                 </ul>
             </span>
