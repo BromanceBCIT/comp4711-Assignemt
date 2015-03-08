@@ -11,7 +11,7 @@ body {
     line-height: 1.4;
 }
 
-header {
+#header {
     text-align: left;
     padding-left: 20px;
     height: 98px;
@@ -28,14 +28,48 @@ mynav {float: right; }
 
 #contents {
 	margin: 0px 0px;
-	padding: 20px 0px;
+	padding: 20px 0px
 }
+
+/** Photos */
+.sidebar .photo {
+        border-bottom: 1px solid #d5d5d5;
+        margin-bottom: 10px;
+}
+
+.gallery {
+    margin-left: auto;
+    margin-right: auto;
+    width: 110%;
+    
+}
+
+.photo img {
+        height: auto;
+        width: 500px;
+        border: 2px solid #000;
+}
+
+.imageView
+{
+    margin: 0px 30px;
+    padding: 150px 40px;
+    text-align: center;  
+}
+
 
 #form {
 
 	margin: 0px 30px;
 	padding: 150px 40px;
         
+}
+#right-bar{
+    margin: 0px 80px;
+    padding: 150px 40px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
 }
 
 .homeBtn {

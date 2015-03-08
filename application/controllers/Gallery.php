@@ -10,23 +10,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 
 /**
- * Description of Photos
+ * Description of Gallery
  *
  * @author Clemens
  */
-class Photos extends Application{
-    public function index()
+class Gallery extends Application {
+
+	public function index()
 	{
-            //get all the photos from the database
-            $pics = $this->photos->getAllPhotos();
-            
-            //build array of formatted cells
-            foreach ($pics as $picture)
+            $pics = $this->Photos->getAllPhotos();
+            foreach ($pics as $pictures)
             {
-                $cells[] = $this->parser->parse('_cell', (array) $picture, true);
+                $cells[] = $this->parser->parse('_cell', (array) $pictures, true);
             }
             
-            //prime the table class
             $this->load->library('table');
             $parms = array (
                 'table_open' => '<table class="gallery">', 
@@ -36,10 +33,19 @@ class Photos extends Application{
             $this->table->set_template($parms);
             
             $rows = $this->table->make_columns($cells, 3);
-            $this->data['thetable'] = $this->table->generate($rows);
+            $this->data['gallerytable'] = $this->table->generate($rows);
             
             //render the data
             $this->data['pagebody']= 'gallery';
             $this->render();
 	}
+        
+        public function image($id)
+        {
+            $this->data['pagebody'] = '_image';  
+            $this->data = array_merge($this->data, (array) $this->Photos->get($id));
+
+            $this->render();            
+        }
+        
 }
