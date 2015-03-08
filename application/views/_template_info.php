@@ -1,7 +1,5 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
 <!DOCTYPE html>
+<html>
     <head>
         <title>{title}</title>
         <meta charset="utf-8">
@@ -9,8 +7,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/main.css">
         <script src="js/vendor/modernizr-2.7.1.min.js"></script>        
         <style type="text/css">
             body {
@@ -20,19 +18,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </head>
     <body class="loading">
         
-        <header style="background-image: url('../img/header.jpg');" >
+        <div id="header" style="background-image: url('/img/header.jpg');" >
             <h1>{pageTitle}</h1>
             <span class="mynav">
                 <ul>
                     <li><a href="/admin">Admin</a></li>
                     <li><a href="/about">About</a></li>
-                    <li><a href="/ContactUs">Contact Us</a></li>
-                    <li><a href="/go">Photo</a></li>
+                    <li><a href="/contactus">Contact Us</a></li>
+                    <li><a href="/gallery">Photo</a></li>
                     <li><a href="/dine">Stay</a></li>                    
                     <li><a href="/">Home</a></li>
                 </ul>
             </span>
-        </header>
+        </div>
         
        	<main>
 	<div id="contents">

@@ -33,4 +33,15 @@ class ContactMessages extends MY_Model{
     public function getAllMessages() {
         return $this->all();
     }
+    
+    public function getNewestMessages($num) {    
+        
+        $val = $this->highest();
+        for ($i = 0; $i < $num &&  $i <= $this->size(); $i++)
+        {
+            $messages[] = $this->get($val -$i);
+        }
+        
+        return $messages;
+    }
 }
