@@ -17,5 +17,6 @@
     <h1>Phone</h1>
     <p>604-451-4436</p>
     <h1>On The Web</h1>
-    <p>Facebook</p>
+    <p><a href="https://www.facebook.com/"><img border="0" alt="f "src="/img/f.jpg" width="70" height="70"></a></p>
+    <p><a href="https://twitter.com"><img border="0" alt="t" src="/img/t.png" width="70" height="70"></a></p>
 </div>
