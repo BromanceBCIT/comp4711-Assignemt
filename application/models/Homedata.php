@@ -15,7 +15,7 @@ class Homedata extends CI_Model{
     
     // Dummy data for home
     var $data = array(
-        array('id' => '1', 'content' => 'By Sea, Land & Air, We Prosper',
+        array('id' => '1', 'content' => 'At any time of the year, Vancouver is sure to surprise and delight.',
             'img' => '../img/bcg_slide-1.jpg'),
         
         array('id' => '2', 'content' => 'Vancouver has plenty: Vancity, The Terminal City, Hollywood North, Raincity, Vansterdam and the Left Coast',
