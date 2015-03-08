@@ -21,7 +21,7 @@ class Admin extends Application {
         
 	public function index()
 	{
-            $this->data['messages'] = $this->ContactMessages->all();
+            $this->data['messages'] = $this->Contacts->all();
             $this->data['photos'] = $this->Photos->all();
             
             $this->data['pagebody'] = 'admin';
@@ -31,7 +31,7 @@ class Admin extends Application {
         
         function addMessage()
         {
-            $Message = $this->ContactMessages->create();
+            $Message = $this->Contacts->create();
             $this->showMessage($Message);
         }
 
@@ -63,7 +63,7 @@ class Admin extends Application {
         }
         
     function confirmMessage() {
-            $record = $this->ContactMessages->create();      
+            $record = $this->Contacts->create();      
 
             
             $record->contactId = $this->input->post('contactId');
@@ -102,7 +102,7 @@ class Admin extends Application {
             // Add or update the record
             if (empty($record->id)) 
             {
-                $newestMessage = $this->ContactMessages->getNewestMessages(1);
+                $newestMessage = $this->Contacts->getNewestMessages(1);
                 
                 if (count($newestMessage) != 0)
                 {
@@ -114,11 +114,11 @@ class Admin extends Application {
                     $record->contactId = 0;
                 }
                 
-                $this->ContactMessages->add($record);
+                $this->Contacts->add($record);
             }
             else 
             {
-                $this->ContactMessages->update($record);
+                $this->Contacts->update($record);
             }
 
             redirect('/admin');

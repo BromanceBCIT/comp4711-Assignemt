@@ -11,10 +11,10 @@
  *
  * @author Clemens
  */
-class ContactMessages extends MY_Model{
+class Contacts extends MY_Model{
     // Constructor
     public function __construct() {
-        parent::__construct('contactmessages', 'contactId');
+        parent::__construct('contact', 'contactId');
     }
     
     public function getMessage($messageNum) {
