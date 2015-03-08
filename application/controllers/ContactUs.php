@@ -23,13 +23,24 @@ class ContactUs extends Application {
             $this->showMessage($message);
 	}
     
-    function showMessage($message) 
+    function showMessage($mes) 
         {
+        
+            $message = '';
+            
+            if (count($this->errors) > 0) {
+                foreach ($this->errors as $error)
+                {
+                    $message .= $error . BR;
+                }
+            }
+            
+            $this->data['errorMessage'] = $message;
 
-            $this->data['fName'] = makeTextField('Name', 'name', $message->name);
-            $this->data['fEmail'] = makeTextField('Email', 'email', $message->email);
-            $this->data['fSubject'] = makeTextArea('Subject', 'subject', $message->subject);
-            $this->data['fMessage'] = makeTextArea('Message', 'message', $message->message);
+            $this->data['fName'] = makeTextField('Name', 'name', $mes->name);
+            $this->data['fEmail'] = makeTextField('Email', 'email', $mes->email);
+            $this->data['fSubject'] = makeTextArea('Subject', 'subject', $mes->subject);
+            $this->data['fMessage'] = makeTextArea('Message', 'message', $mes->message);
             
             $this->data['pagebody'] = 'contact_us';
 

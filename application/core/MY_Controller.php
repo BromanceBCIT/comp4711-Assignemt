@@ -17,6 +17,7 @@ class Application extends CI_Controller {
         /* Set the page title, heading here */
         $this->data["title"] = "Vancouver Explorer -- COMP4711 Assignemt1";
         $this->data["pageTitle"] = "Vancouver Explorer";
+        $this->errors = array();
     }
 
     /**
