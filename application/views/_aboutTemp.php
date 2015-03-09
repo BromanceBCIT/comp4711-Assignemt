@@ -16,7 +16,7 @@
                         top: 15%;">
                 <h2>About</h2>
                 <p style="color: black;">
-                   This a web application developed for the comp 4711
+                   This web application is developed for the comp 4711
                     web application development course at British Columbia Institute of
                     Technology.
                 </p>
