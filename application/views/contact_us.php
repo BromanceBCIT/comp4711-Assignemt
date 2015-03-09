@@ -1,6 +1,7 @@
 <div id="form">
     <h1>Contact Us</h1>
-    <p>We are here to answer any question you may have about traveling in Vancouver. Reach out to us and we'll respond as soon as we can. </p>
+    <p>We are here to answer any question you may have about traveling in Vancouver. <br>
+       Feel free to contact us or leave your comments below. </p>
     <div class="errors">{errorMessage}</div>
     <form action="/ContactUs/confirmMessage" method="post">
         {fName}
