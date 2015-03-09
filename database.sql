@@ -44,7 +44,8 @@ INSERT INTO `photos`
 INSERT INTO `photos`
   VALUES (3, 'SO COLD THIS CHRISTMAS', 'Jim Hejl', 'http://jaybanks.ca/images/photos/so-cold-this-christmas-by-jim-hejl.jpg', 'Winter is trying to breathe new life into our town. When the snow is all around I feel like in a totally different city.', '2015-12-15');
 
-
+INSERT INTO `contact`
+  VALUES (1, 'Clemens Lo', 'hello@gmail.com', 'hello', 'hello hello');
 
 INSERT INTO `restaurants`
     VALUES (1, 'THE ABBEY', '117 WEST PENDER VANCOUVER, BC V6B 1S4', '604-336-7100', 'http://abbeyvan.com/', 'http://www.tourismvancouver.com/includes/content/images/listings/abbey0.jpg' 

@@ -1,4 +1,3 @@
-<div>first 40 chars <span style="visibility:hidden">last 120 chars</span></div>
 <div>
     <h1><a href="{image}"></a>{title}</h1>
     <br>
