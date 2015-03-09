@@ -304,14 +304,14 @@ class Admin extends Application {
             
             if (count($this->errors) > 0)
             {
-                $this->showMessage($record);
+                $this->showRest($record);
                 return;
             }
             
             // Add or update the record
             if (empty($record->id)) 
             {
-                $latestRest = $this->Contacts->getlatestRest(1);
+                $latestRest = $this->Restaurants->getlatestRest(1);
                 
                 if (count($latestRest) != 0)
                 {

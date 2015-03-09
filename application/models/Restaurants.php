@@ -45,7 +45,7 @@ class Restaurants extends MY_Model {
             $last[] = $this->get($highestVal - $i);
         }
         
-        return last;
+        return $last;
     }
     
     // Get all restaurants
