@@ -2,7 +2,7 @@
  Vancouver Explorer
 ####################
 
-COMP4711 Assignment1
+COMP4711 Assignment2
 
 ###################
    Team Members
