@@ -1,4 +1,6 @@
 <div id="form">    
     <h1>Restaurant</h1>
-    {RestaurantList}
+    <div class="imageDiv">
+        {RestaurantList}
+    </div>
 </div>
