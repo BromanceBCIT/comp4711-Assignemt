@@ -11,7 +11,7 @@ body {
     line-height: 1.4;
 }
 
-header {
+#header {
     text-align: left;
     padding-left: 20px;
     height: 98px;
@@ -20,11 +20,59 @@ header {
     z-index: 10;
     position: fixed;
 }
-h1 {height: 1px;}
+h1 {height: 15px;}
 mynav {float: right; }
 .mynav ul {list-style-type:none; padding-right: 20px; font-size: 160%; margin-top:1px;}
 .mynav ul li {float:right; margin-right:15px; color:white;list-style-type:none;}
 .mynav a {text-decoration:none;color:black; font-weight:bold;}
+
+#contents {
+	margin: 0px 0px;
+
+}
+
+/** Photos */
+.sidebar .photo {
+        border-bottom: 1px solid #d5d5d5;
+        margin-bottom: 10px;
+}
+
+.gallery {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;    
+}
+
+.photo img {
+        height: auto;
+        width: 400px;
+        border: 2px solid #000;
+}
+
+.imageView {
+    margin: 0px 30px;
+    padding: 150px 40px;
+    text-align: center;  
+}
+
+.restView {
+    margin: 0px 30px;
+    padding: 150px 40px;
+    text-align: left;  
+}
+
+#form {
+    margin: 0px 30px;
+    padding: 150px 40px;
+    text-align: left;          
+}
+#right-bar{
+    margin: 0px 80px;
+    padding: 150px 40px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
 
 .homeBtn {
     display: block;
@@ -113,7 +161,7 @@ textarea {
 body, html {
     height: 100%;
     min-height: 100%;
-    background-color: #000000;
+    background-color: #FFFFFF;
 }
 body {
 
@@ -172,10 +220,10 @@ main {
     top: 50%;
 }
 .hsContent h2  {
-    color: #fff8de;
+    color: #ff0;
     background-color: rgba(0,0,0,0.5);
     padding: 10px 5px;
-    font-size: 35px;
+    font-size: 24px;
     line-height: 38px;
     margin-bottom: 12px;
 }

@@ -15,16 +15,16 @@ class Homedata extends CI_Model{
     
     // Dummy data for home
     var $data = array(
-        array('id' => '1', 'content' => 'By Sea, Land & Air, We Prosper',
+        array('id' => '1', 'content' => 'At any time of the year, Vancouver is sure to surprise and delight.',
             'img' => '../img/bcg_slide-1.jpg'),
         
-        array('id' => '2', 'content' => 'Vancouver has plenty: Vancity, The Terminal City, Hollywood North, Raincity, Vansterdam and the Left Coast',
+        array('id' => '2', 'content' => 'A browse through the Tourism Vancouver photo and video gallery will introduce you to this city like nothing else can',
             'img' => 'img/bcg_slide-2.jpg'),
         
-        array('id' => '3', 'content' => 'Go anywhere. Learn anything. Read every day',
+        array('id' => '3', 'content' => 'Vancouver is one of North America’s most under-rated tourist destinations.',
             'img' => 'img/bcg_slide-3.jpg'),
         
-        array('id' => '4', 'content' => 'Vancouver: Pedalling into a carless future',
+        array('id' => '4', 'content' => 'Everything is all waiting for you in Vancouver.',
             'img' => 'img/bcg_slide-4.jpg')
     );
     

@@ -30,9 +30,15 @@ class Welcome extends Application {
     }
     
     public function creatHomes($home)
-        {
-            $content = $this->parser->parse('_sectionTemp', (array) $home, true);
-            
-            return $content;
-        }
+    {
+        $content = $this->parser->parse('_sectionTemp', (array) $home, true);
+
+        return $content;
+    }
+    
+    public function intro($section)
+    {
+        $this->data['pagebody'] = 'intro';
+        $this->render();        
+    }
 }
