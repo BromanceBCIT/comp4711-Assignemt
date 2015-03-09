@@ -9,7 +9,7 @@
 /**
  * Description of dineData
  *
- * @author Clemens
+ * @author William
  */
 class Dinedata extends CI_Model{
     

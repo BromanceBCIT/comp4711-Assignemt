@@ -25,9 +25,9 @@
                     <li><a href="/admin">Admin</a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/contactus">Contact Us</a></li>
-                    <li><a href="/gallery">Photo</a></li>
-                    <li><a href="/dine">Stay</a></li>                    
-                    <li><a href="/">Home</a></li>
+                    <li><a href="/gallery">Gallery</a></li>
+                    <li><a href="/dine">Dine</a></li>                    
+                    <li><a href="/index.php">Home</a></li>
                 </ul>
             </span>
         </div>
