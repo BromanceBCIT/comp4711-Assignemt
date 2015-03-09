@@ -1,4 +1,6 @@
 <div id="contents" class="dines">
-       <h1>Restaurant</h1>
-       {dinesection}
+    <a class="dineOut" href="dine/restaurants/{dineOutId}">
+        <img src="{image}" />
+    </a>
+    {RestaurantList}
 </div>

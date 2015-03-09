@@ -13,23 +13,34 @@
  */
 class Dine extends Application{
     public function index()
-	{
-                $dines = $this->dinedata->getAllDine();
-                $content = "";
-                // Parse each dine section into html
-                foreach($dines as $dine)
-                {
-                    $content .= $this->creatDines($dine);
-                }
-                // Place the dine html into the page
-                $this->data['dinesection'] = $content;
-                $this->data['pagebody'] = 'dine';
-                $this->render();
-	}
-        // Parse the contents of a single post into the post template
-        public function creatDines($dine)
+    {
+        $rests = $this->Restaurants->getAllRests();
+
+        foreach ($rests as $r)
         {
-            $content = $this->parser->parse('_sectionTemp', (array) $dine, true);
-            return $content;
+            $cells[] = $this->parser->parse('dine', (array) $r, true);
         }
+
+        $this->load->library('table');
+        $parms = array (
+            'table_open' => '<table class="dineOutTable">', 
+            'cell_start' => '<td class="oneRest">', 
+            'cell_alt_start' => '<td class="oneRest">'
+        );
+
+        $this->table->set_template($parms);
+
+        $rows = $this->table->make_columns($cells, 3);
+        $this->data['RestaurantList'] = $this->table->generate($rows);
+        $this->data['pagebody'] = 'dine';
+        $this->render();
+    }
+    // Parse the contents of a single post into the post template
+    public function restaurants($dineOutId)
+    {
+        $this->data['pagebody'] = '_restaurant';  
+        $this->data = array_merge($this->data, (array) $this->Restaurants->get($dineOutId));
+
+        $this->render(); 
+    }
 }
