@@ -1,6 +1,3 @@
-<div id="contents" class="dines">
-    <a class="dineOut" href="dine/restaurants/{dineOutId}">
-        <img src="{image}" />
-    </a>
+<div id="contents" class="dines">    
     {RestaurantList}
 </div>

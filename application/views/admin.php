@@ -24,6 +24,36 @@
     <a href='/admin/addPhoto'>Add a new Photo</a>
     <br />
     <br />
+    <h1>Restaurants</h1>
+    
+    <table border="0">
+        <tr>
+            <th>ID</th>
+            <th>Restaurant Name</th>
+            <th>Address</th>
+            <th>Phone Number</th>
+            <th>Website</th>
+            <th>Photo</th>
+            <th>Description</th>
+        </tr>
+        
+        {restaurants}
+        <tr>
+            <td>{dineOutId}</td>
+            <td>{title}</td>
+            <td>{address}</td>
+            <td>{phone}</td>
+            <td>{website}</td>
+            <td>{image}</td>
+            <td>{description}</td>
+        </tr>
+        {/restaurants}
+        
+    </table> 
+    <a href='/admin/addRestaruant'>Add a new Restaurant</a>
+    <br>
+    <br>
+    
     <h1>Message</h1>
     <table border="0">
         <tr>

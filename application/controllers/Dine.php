@@ -1,5 +1,5 @@
 <?php
-
+defined('BASEPATH') OR exit('No direct script access allowed');
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,7 +9,7 @@
 /**
  * Description of dine
  *
- * @author Clemens
+ * @author William
  */
 class Dine extends Application{
     public function index()
@@ -23,7 +23,7 @@ class Dine extends Application{
 
         $this->load->library('table');
         $parms = array (
-            'table_open' => '<table class="dineOutTable">', 
+            'table_open' => '<table class="dine">', 
             'cell_start' => '<td class="oneRest">', 
             'cell_alt_start' => '<td class="oneRest">'
         );

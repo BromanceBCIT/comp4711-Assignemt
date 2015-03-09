@@ -23,6 +23,7 @@ class Admin extends Application {
 	{
             $this->data['messages'] = $this->Contacts->all();
             $this->data['photos'] = $this->Photos->all();
+            $this->data['restaurants'] = $this->Restaurants->all();
             
             $this->data['pagebody'] = 'admin';
 
@@ -219,6 +220,114 @@ class Admin extends Application {
             else 
             {
                 $this->Photos->update($record);
+            }
+
+            redirect('/admin');
+        }
+        
+        function addRest()
+        {
+            $Rest = $this->Restaurants->create();
+            $this->showRest($Rest);
+        }
+
+        function showRest($rest) 
+        {
+        
+            $errorMsg = '';
+            
+            if (count($this->errors) > 0) {
+                foreach ($this->errors as $error)
+                {
+                    $errorMsg .= $error . BR;
+                }
+            }
+            
+            $this->data['errorMessage'] = $errorMsg;
+
+            $this->data['ftitle'] = makeTextField('Title', 'title', $rest->title);
+            $this->data['faddress'] = makeTextField('Address', 'address', $rest->address);
+            $this->data['fphone'] = makeTextArea('Phone', 'phone', $rest->phone);
+            $this->data['fwebsite'] = makeTextArea('Website', 'website', $rest->website);
+            $this->data['fimage'] = makeTextArea('Photo', 'image', $rest->image);
+            $this->data['bdescription'] = makeTextArea('Description', 'description', $rest->description);            
+            
+            $this->data['pagebody'] = 'rest_edit';
+
+            $this->data['bSubmit'] = makeSubmitButton('Submit', "Submit the "
+                    . "updated restaurant", 'btn-success');
+
+            $this->render();
+        }
+        
+    function confirmRest() {
+            $record = $this->Restaurants->create(); 
+            
+            $record->dineOutId = $this->input->post('dineOutId');
+            $record->title = $this->input->post('title');
+            $record->address = $this->input->post('address');
+            $record->phone = $this->input->post('phone');
+            $record->website = $this->input->post('website');
+            $record->image = $this->input->post('image');
+            $record->description = $this->input->post('description');
+
+            // Error checking
+            if (empty($record->title))
+            {
+                $this->errors[] = 'You must specify a title.';
+            }
+            
+            if (empty($record->address))
+            {
+                $this->errors[] = 'You must specify an address.';
+            }
+
+            if (empty($record->phone))
+            {
+                $this->errors[] = 'You must specify a phone number.';
+            }
+
+            if (empty($record->website))
+            {
+                $this->errors[] = 'You must specify a website.';
+            }
+            
+            if (empty($record->image))
+            {
+                $this->errors[] = 'You must specify a photo.';
+            }
+            
+            if (empty($record->description))
+            {
+                $this->errors[] = 'You must specify a description.';
+            }
+            
+            if (count($this->errors) > 0)
+            {
+                $this->showMessage($record);
+                return;
+            }
+            
+            // Add or update the record
+            if (empty($record->id)) 
+            {
+                $latestRest = $this->Contacts->getlatestRest(1);
+                
+                if (count($latestRest) != 0)
+                {
+                    // If there are pre-existing posts
+                    $record->dineOutId = $latestRest[0]->dineOutId + 1;
+                }
+                else
+                {
+                    $record->dineOutId = 0;
+                }
+                
+                $this->Restaurants->add($record);
+            }
+            else 
+            {
+                $this->Restaurants->update($record);
             }
 
             redirect('/admin');

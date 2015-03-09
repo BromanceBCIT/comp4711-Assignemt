@@ -14,7 +14,7 @@
                  data-center="bottom: 200px; opacity: 1" 
                  data-top="bottom: 1200px; opacity: 0"
                  data-anchor-target="#slide-{id} h2">
-                <a href='index/intro/{section}'><h2>{content}</h2></a>
+                <h2>{content}</h2>
             </div>
         </div>
     </div>                                

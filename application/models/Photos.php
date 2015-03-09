@@ -14,7 +14,7 @@
  */
 class Photos extends MY_Model {
 
-    // Constructor
+    // Constructorrestaurants
     public function __construct() {
         parent::__construct('photos', 'photoId');
     }

@@ -35,7 +35,7 @@ class Restaurants extends MY_Model {
     }        
 
     // Get number of latest restaurant
-    public function getlastRest($num) {       
+    public function getlatestRest($num) {       
         
         // Retrieve the newest $num blog posts        
         $highestVal = $this->highest();
