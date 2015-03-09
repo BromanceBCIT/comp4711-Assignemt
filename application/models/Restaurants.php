@@ -49,7 +49,7 @@ class Restaurants extends MY_Model {
     }
     
     // Get all restaurants
-    public function getAllRest() {
+    public function getAllRests() {
         return $this->all();
     }
 
