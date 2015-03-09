@@ -18,7 +18,7 @@ class Dine extends Application{
 
         foreach ($rests as $r)
         {
-            $cells[] = $this->parser->parse('dine', (array) $r, true);
+            $cells[] = $this->parser->parse('_restLink', (array) $r, true);
         }
 
         $this->load->library('table');

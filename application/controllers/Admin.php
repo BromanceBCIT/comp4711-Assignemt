@@ -225,7 +225,7 @@ class Admin extends Application {
             redirect('/admin');
         }
         
-        function addRest()
+        function addRestaruant()
         {
             $Rest = $this->Restaurants->create();
             $this->showRest($Rest);
