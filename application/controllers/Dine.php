@@ -31,6 +31,7 @@ class Dine extends Application{
         $this->table->set_template($parms);
 
         $rows = $this->table->make_columns($cells, 1);
+        
         $this->data['RestaurantList'] = $this->table->generate($rows);
         $this->data['pagebody'] = 'dine';
         $this->render();

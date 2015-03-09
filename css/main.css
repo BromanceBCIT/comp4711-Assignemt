@@ -40,8 +40,7 @@ mynav {float: right; }
 .gallery {
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
-    
+    width: 90%;    
 }
 
 .photo img {
@@ -59,7 +58,7 @@ mynav {float: right; }
 .restView {
     margin: 0px 30px;
     padding: 150px 40px;
-    text-align: center;  
+    text-align: left;  
 }
 
 #form {

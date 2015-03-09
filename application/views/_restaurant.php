@@ -6,6 +6,20 @@
     <img src="{image}" />
     </a>
     <p>
-        {description}</p>
+        {description}
+    </p>
+    <br>
+    <div>
+        <p>
+            {address}
+        </p>
+        <p>
+            {phone}
+        </p>
+        <p>
+            <a class="link" href="{website}">{website}</a>
+        </p>
+        
+    </div>
     <br>    
 </div>
